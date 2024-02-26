@@ -1,0 +1,69 @@
+---
+import { Picture } from "astro:assets";
+import FeatureImg1 from "../assets/features/payment_options.jpg";
+import Heading from "./heading.astro";
+
+const { nomargin } = Astro.props;
+---
+
+<div
+  class:list={[
+    "max-w-4xl mx-auto flex flex-col items-center justify-center",
+    !nomargin && "mt-24",
+  ]}>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    Payment <span class="text-[#307d7e]">Options</span>
+  </h2>
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+<div class="grid place-items-center">
+  <div class="max-w-lg">
+    <div class="flex items-left gap-3 mt-10">
+      <div>
+        <Heading id="payments"/>
+        <h3 class="text-2xl font-medium ">
+          Thank you for choosing KB Business Services, LLC for your tailored needs.
+        </h3>
+      </div>
+    </div>
+    <p class="mt-4 text-slate-600 [text-wrap:balance]">We appreciate your business. Our team will provide you with an invoice.</p>
+    <p class="mt-4 text-slate-600 [text-wrap:balance]">For payment, please use one of the following options: </p>
+
+    <ul class="grid mt-6 text-left gap-y-4">
+      <li class="flex items-center gap-3 text-neutral-800">
+        <span><strong>Checks: </strong>Invoices can be paid using checks payable to <u>KB Business Services, LLC</u></span>
+      </li>
+
+      <li class="flex items-center gap-3 text-neutral-800">
+        <span><strong>Direct Deposit:</strong> Invoices can be paid using bank-to-bank or ACH transfers. Payment information will be provided with Invoice.</span>
+      </li>
+
+      <li class="flex items-center gap-3 text-neutral-800">
+        <span><strong>Zelle:</strong> Invoices can be paid by sending Zelle payments to KB Business Services, LLC using the phone number provided on the Invoice.</span>
+      </li>
+    </ul>
+    
+  </div>
+ 
+</div>
+<div class="grid place-items-center">
+  <Picture
+    src={FeatureImg1}
+    alt="Business Consultation"
+    formats={["avif", "webp"]}
+    loading="lazy"
+  />
+</div>
+</div>
+
+<div class="flex flex-col items-center justify-center">
+    <Heading id="giving"/>
+    <h3 class="text-2xl font-medium ">
+      Interested in GIVING?
+    </h3>
+  <p class="mt-4 text-slate-600 [text-wrap:balance]">You can give to KB Business Services, LLC to support their operational costs and ability to expand its services.</p>
+  <p class="mt-4 text-slate-600 [text-wrap:balance]">If you are interested in giving or donating funds, please send an email to <a href="mailto:contact@kbbusinessservicesllc.com">contact@kbbusinessservicesllc.com</a> for more information.</p>
+</div>
+<br/>
+<br/>

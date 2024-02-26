@@ -1,0 +1,91 @@
+---
+import { Image, Picture } from "astro:assets";
+import heroImage from "../assets/1.jpg";
+import Link from "@components/ui/link.astro";
+import Container from "@components/container.astro";
+---
+<style>
+  .header_image {
+    margin: 0 auto;
+    max-height: 60vh;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%;
+  }
+
+</style>
+
+<style>
+  .video_container {
+    position:relative;
+    max-height: 60vh;
+  }
+
+  .video_container video {
+    position:relative;
+    z-index: 0;
+    object-fit:cover;
+    width: 100%;
+    max-height: 60vh;
+    background-size: cover;
+    overflow: hidden;
+  }
+</style>
+
+
+<div class="overflow-x-clip">
+  <div class="header">
+    <div>
+      <Container>
+          <div class="relative">
+            <p class="text-xl text-gray-800 tracking-tight -mt-2">
+              Navigating Complexity, 
+              {" "}
+              <span class="text-[#307d7e]">Simplifying Success.</strong>
+              </p>
+          </div>
+          <br/>
+      </Container>
+    </div>
+    <div class="bg-gradient-to-bl from-[#307d7e] to-[#307d7e]">
+      <div class="header_image">
+        <Picture
+          src={heroImage}
+          alt="KB Business Services"
+          formats={["avif", "webp"]}
+          sizes="(max-width: 1024px) 100vw, 50vw"
+          widths={[240, 540, 720, heroImage.width]}
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+    
+      <Container>
+        <br/>
+          <div class="relative">
+            <h1 class="text-4xl text-white tracking-tight -mt-2">
+              <strong>Business and Personal Branding Consulting Services</strong>
+              </h1>
+          </div>
+          <br/>
+          <div class="relative">
+            <p class="text-2xl text-white tracking-tight -mt-2">
+              We have tailored solutions to meet your needs.
+            </p>
+          </div>
+          <br/>
+      </Container>
+    </div>
+    <div class="bg-gradient-to-bl from-[#307d7e79] to-[#307d7ea2]" style="text-align:left;">
+      <Container>
+        <br/>
+        <div class="relative">
+          <p class="text-xl text-white tracking-tight -mt-2">
+            "The growth and development of people is the highest calling of leadership." —Harvey S. Firestone
+          </p>
+        </div>
+        <br/>
+      </Container>
+    </div>
+  </div>
+</div>

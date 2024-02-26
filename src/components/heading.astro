@@ -1,0 +1,31 @@
+---
+const { 'aria-label': ariaLabel, id, text } = Astro.props;
+
+const href = `#${id}`;
+---
+
+<span {id} class="container">
+  {text}
+  <a aria-label={ariaLabel} {href}></a>
+</span>
+
+<style lang="css">
+  .anchor-link {
+    visibility: hidden;
+  }
+
+  a {
+    color: hsl(var(--colour-text-hue) var(--colour-text-saturation) var(--colour-text-luminance));
+    text-decoration: none;
+    height: 50px;
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+  }
+
+  .container:focus .anchor-link,
+  .container:hover .anchor-link {
+    visibility: visible;
+  }
+</style>

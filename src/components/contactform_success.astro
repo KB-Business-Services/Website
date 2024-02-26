@@ -1,0 +1,26 @@
+---
+import Heading from "./heading.astro";
+
+const { nomargin } = Astro.props;
+---
+
+<div
+  class:list={[
+    "max-w-4xl mx-auto flex flex-col items-center justify-center",
+    !nomargin && "mt-24",
+  ]}>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    Form <span class="text-[#307d7e]">Submitted</span>
+  </h2>
+</div>
+
+<div class="flex flex-col items-center justify-center">
+    <Heading id="giving"/>
+    <h3 class="text-2xl font-medium ">
+      Thank you!
+    </h3>
+  <p class="mt-4 text-slate-600 [text-wrap:balance]">You form was submitted successfully, someone from our team will contact you soon.</p>
+  <p class="mt-4 text-slate-600 [text-wrap:balance]">We appreciate the opportunity to work with you!</p>
+</div>
+<br/>
+<br/>

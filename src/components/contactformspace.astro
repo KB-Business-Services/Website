@@ -1,0 +1,43 @@
+---
+import { Icon } from "astro-icon/components";
+import Container from "@components/container.astro";
+import Contactform from "@components/contactform.astro";
+---
+
+<!-- Contact Form -->
+
+<div class="bg-gradient-to-bl from-[#307d7e] to-[#307d7e]">
+<Container>
+  <br/>
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
+      <div>
+        <h2 class="font-medium text-2xl text-white">
+          Contact KB Business Services, LLC
+        </h2>
+        <p class="text-lg leading-relaxed text-white mt-3">
+          Do you have need for one of our services? Fill
+          out the form, send an email, or call us! We are here to help you with
+          your needs.
+        </p>
+        <div class="mt-5">
+          <div class="flex items-center mt-2 space-x-2 text-white">
+            <Icon class="text-white w-4 h-4" name="uil:map-marker" />
+            <span>Salt Lake City, UT 84116</span>
+          </div><div class="flex items-center mt-2 space-x-2 text-white">
+            <Icon class="text-white w-4 h-4" name="uil:envelope" />
+            <a href="mailto:contact@kbbusinessserviceslcc.com">
+              contact@kbbusinessservicesllc.com
+            </a>
+          </div><div class="flex items-center mt-2 space-x-2 text-white">
+            <Icon class="text-white w-4 h-4" name="uil:phone" />
+            <a href="tel:+1 (951) 317-5195">+1 (951) 317-5195</a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-slate-100 p-5 md:p-8 rounded-xl mb-5">
+        <Contactform />
+      </div>
+    </div>
+  <br/>
+</Container>
+</div>

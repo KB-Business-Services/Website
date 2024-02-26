@@ -1,0 +1,13 @@
+---
+import Container from "@components/container.astro";
+import Layout from "@layouts/Layout.astro";
+import Payment from "@components/payment_layout.astro";
+import ContactSuccess from "@components/contactform_success.astro";
+---
+
+<Layout title="Payment Options" footerMargin={false}>
+  <Container>
+    <ContactSuccess/>
+    <Payment />
+  </Container>
+</Layout>

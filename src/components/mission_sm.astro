@@ -1,0 +1,43 @@
+---
+import Container from "@components/container.astro";
+import Heading from "./heading.astro";
+import Link from "./ui/link.astro";
+---
+<Container>
+<div class="grid sm:grid-cols-2 gap-10 mx-auto mt-24">
+    <div class="relative">
+      <h2 class="text-5xl text-gray-800 tracking-tight -mt-2"><Heading id="mission"/>
+        <strong>Our
+        {" "}
+        <span class="text-[#307d7e]">Mission</strong></span>
+      </h2>
+    </div>
+    <div class="place-self-center">
+      <p class="text-lg max-w-xl mt-4 leading-relaxed text-slate-500">
+        
+KB Business Services, LLC is committed to empowering organizations and individuals through strategic consulting and tailored services to drive success in a dynamic global landscape.
+      </p>
+      <br/>
+      <div
+  class:list={[
+    "mx-auto flex flex-col items-center justify-center",
+  ]}>
+  <Link href="/about" size="md" class="inline-flex items-center group gap-px">
+    <span>Read More About Us</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+      <path
+        fill-rule="evenodd"
+        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </Link>
+</div>
+    </div>
+  </div>
+  </Container>
+  <br/>
+  <br/>

@@ -1,0 +1,20 @@
+---
+import Container from "@components/container.astro";
+import ServicesSm from "@components/services-sm.astro";
+import Hero from "@components/hero.astro";
+import Testimonials from "@components/testimonials.astro";
+import Layout from "@layouts/Layout.astro";
+import Contactformspace from "@components/contactformspace.astro";
+import Features from "@components/features.astro";
+import MissionSm from "@components/mission_sm.astro";
+---
+
+<Layout footerMargin={false}>
+  <Hero />
+  <MissionSm/>
+  <Container>
+    <Features/>
+  </Container>
+  <Testimonials />
+  <Contactformspace/>
+</Layout>

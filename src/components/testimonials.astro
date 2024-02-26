@@ -1,0 +1,134 @@
+---
+import Container from "@components/container.astro";
+import Review from "@components/review.astro";
+import Link from "./ui/link.astro";
+
+const testimonials = [
+  {
+    name: "Joseph Andorful",
+    title: "Co-Founder & VP of Software Development at Strascend, LLC.",
+    image: "/testimonials/JosephAndorful.jpeg",
+    text: "The result was immediate. Ms. Allard-Blaisdell's expertise in consulting was evident in her ability to analyze complex problems and develop practical and effective solutions. She worked closely with our clients to understand their needs and provided valuable insights that helped drive their success.",
+  },
+  {
+    name: "Gloria H. Mensah",
+    title: "Founder & Executive Director at GK Folks Foundation",
+    image: "/testimonials/GloriaMensah.jpeg",
+    text: "Salisha led the rebranding of the GK Folks Foundation, shortly before the onset of the Covid-19 pandemic. As an organizational leadership expert with over a decade of experience in the nonprofit sector, Salisha combined her operational knowledge of the foundation with her specialized leadership training to provide guidelines that propelled Gk Folks Foundation efforts and impact.",
+  },
+  {
+    name: "Priscilla Vloe",
+    title: "Administrative Officer at University of Utah Health",
+    image: "/testimonials/PriscillaVloe.jpeg",
+    text: "Throughout the years, I have seen Dr. Allard-Blaisdell be a mentor for various people. She has made a great impact on my life and the life of others by helping us get to our professional goals.",
+  },
+  {
+    name: "Amira Kherrallah",
+    title: "Founder & Executive Director at PreventHer, Audio-Video Specialist at Les Olson IT",
+    image: "/testimonials/AmiraK.jpeg",
+    text: "Salisha's knowledge is a real asset and can help train and create a high-quality and productive workforce within the community.",
+  },
+  {
+    name: "Debbee Maraglio-Lynn, PhD.",
+    title: "Founder at Jellyfish Flow LLC",
+    image: "/testimonials/DrDebbeeMaraglio-Lynn.jpeg",
+    text: "Dr. Allard-Blaisdell's personality is a powerhouse of possibility and compassion. She is an outstanding collaborator and group member, a jewel to any community.",
+  },
+  {
+    name: "Pauline B. Elwin, EdD.",
+    title: "Principal Consultant & Leadership Coach at Elwin Innovative Global Consulting LLC",
+    image: "/testimonials/DrPaulineElwin.jpeg",
+    text: "Dr. Allard-Blaisdell has excellent critical thinking skills, exceptional written and verbal communication, and the expertise and drive of an effective leader.",
+  },
+  {
+    name: "Earl Creps, PhD. D.Min.",
+    title: "Founding Director at Center for Leadership Studies Northwest University",
+    image: "/testimonials/EarlCreps.jpeg",
+    text: "I met Dr. Salisha Allard-Blaisdell while she was working on her doctoral degree in Organizational leadership in April 2019. I was serving as the Dean of her program and CFLS. During this time, I noticed Salisha’s professionalism and dedication to leadership training, so I asked her to serve as one of the CFLS Ambassadors, a group that reaches out to our students.",
+  },
+  {
+    name: "Dr. Thomas Alsbury",
+    title: "Professor and Dissertation Chair at Northwest University",
+    image: "/testimonials/ThomasAlsbury.jpeg",
+    text: "I am familiar with Salisha’s work because she was one of my students at Northwest University between 2019 and 2022. To this day I have been amazed at her accomplishments and dedication to the field of education and organizational leadership. Her work is indeed exemplary and I use her dissertation as a sample work for my other doctoral students at Northwest University.",
+  },
+  {
+    name: "Marianne F. McKnight",
+    title: "Senior Associate Dean, Faculty Affairs at Salt Lake Community College",
+    image: "/testimonials/MarianneMcKnight.jpeg",
+    text: "She never gives up. Some might say that I was in the position to mentor her, but the truth is, I feel she has mentored me. Her passion is matched by her strong work ethic, integrity, love of humanity, great intellectual capacity, extraordinary problem-solving skills, and the ability to communicate with and across a wide expanse of backgrounds and personalities. She meets people where they are at and brings them together.",
+  },
+  {
+    name: "Donald D. Conant, PhD.",
+    title: "Professor, Chair of Business and Economics at Saint Martin's University",
+    image: "/testimonials/DonConant.jpeg",
+    text: "I met Salisha in the summer of 2019 when she enrolled as a student in my critical inquiry course at Northwest University. From my first encounter with Salisha I was impressed with her commitment to educational leadership. As she progressed through the program, she demonstrated a genuine interest in and a commitment to the research of her classmates. She co-formed and co-led a peer support group intended to help students complete their dissertations. Every student in her group completed their dissertation on time.",
+  },
+  {
+    name: "Dr. James M. Davy",
+    title: "Director of Center for Applied Appreciative Inquiry at Rutgers University",
+    image: "/testimonials/JamesDavy.jpeg",
+    text: "I came to know Dr. Allard-Blaisdell when she enrolled at Rutgers for her MPA program. Salisha took my Strategic Planning course in September, 2014 and immediately stood out as a student who was always prepared for our interactive class discussions. Her level of excellence was such that I was surprised to learn that my class was her first class in the MPA program. Dr. Allard-Blaisdell presented herself as a hard-working, determined individual in my class, and throughout her time at Rutgers University-Newark.",
+  },
+  {
+    name: "Dr. Rowlanda Cawthon",
+    title: "Dean, Associate Professor at Northwest University",
+    image: "/testimonials/RowlandaCawthon.jpeg",
+    text: "I served on her research committee and was a part of her comprehensive exam board, responsible for judging her work and mentoring her throughout the Ph.D. program. As Dr. Allard-Blaisdell’s professor, I was impressed with her resilience and commitment to her own learning. She is a transformational leader, critical thinker, and great communicator. She shined among her peers and always used assignments to leverage learning.",
+  },
+];
+---
+
+<style>
+  @media (min-width: 768px) {
+    @media (prefers-reduced-motion: no-preference) {
+      .md\:motion-safe\:animate-marquee{
+        animation: marquee 100s linear infinite;
+      }
+    }
+  }
+</style>
+
+<Container>
+  <div class="mt-24">
+    <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
+      <span class="text-[#307d7e]">Testimonials</span> 
+    </h2>
+  </div>
+</Container>
+
+<div class="mt-10 relative overflow-x-clip">
+  <div
+    class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-[#307d7e] right-1/3 -top-10">
+  </div>
+  <div
+    class="absolute w-96 h-96 blur-2xl -z-10 bg-gradient-radial from-[#307d7e] right-1/3 translate-x-2/3 top-10">
+  </div>
+  <div class="relative md:flex gap-10 overflow-hidden py-5 group">
+    <div
+      class="md:motion-safe:animate-marquee md:motion-reduce:hidden w-auto py-5 overflow-x-auto flex flex-nowrap min-w-full shrink-0 items-center gap-10 snap-x snap-mandatory px-5">
+      {testimonials.map((item) => <Review {...item} />)}
+    </div>
+    <!-- For Smooth Transitions -->
+    <div
+      class="md:motion-safe:animate-marquee hidden md:motion-reduce:hidden md:flex min-w-full shrink-0 items-center gap-10 snap-x snap-mandatory">
+      {testimonials.map((item) => <Review {...item} />)}
+    </div>
+  </div>
+  <div class:list={["mx-auto flex flex-col items-center justify-center",]}>
+  <Link href="/testimonial" size="md" class="inline-flex items-center group gap-px">
+    <span>Read Full Testimonials</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+      <path
+        fill-rule="evenodd"
+        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </Link>
+  </div>
+  <br/>
+</div>

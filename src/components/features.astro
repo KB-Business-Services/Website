@@ -1,0 +1,87 @@
+---
+// @ts-ignore
+import Link from "./ui/link.astro";
+
+const features = [
+  {
+    title: "Business Consultation",
+    description:
+      "This service can cover various aspects of business, including operations, marketing, finance, human resources, and more.",
+    link: "/services/#business_consultation",
+  },
+  {
+    title: "Strategic Planning",
+    description:
+      "This services involves analyzing the internal and external environment, assessing strengths and weaknesses, and developing strategies and action plans to guide decision-making and resource allocation.",
+    link: "/services/#strategic_planning",
+  },
+  {
+    title: "Grant Writing",
+    description:
+      "This service includes researching funding opportunities, crafting compelling proposals that align with the funder's priorities, and ensuring compliance with application requirements.",
+    link: "/services#grant_writing",
+  },
+  {
+    title: "Program Development",
+    description:
+      "This service involves conducting needs assessments, defining program objectives, designing intervention strategies, developing curriculum or materials, and establishing evaluation measures to assess program effectiveness.",
+    link: "/services/#program_development",
+  },
+  {
+    title: "Leadership Development",
+    description:
+      "This service includes providing training, coaching, and mentoring to develop leadership skills such as communication, decision-making, conflict resolution, and strategic thinking.",
+    link: "/services/#leadership_development",
+  },
+  {
+    title: "Other Services",
+    description:
+      "In addition to our core offerings, we provide the following specialized services: Immigration Advising, Academic Mentoring, and Editorial Services",
+    link: "/services/#other_services",
+  },
+];
+---
+
+<div class="mt-24 max-w-3xl mx-auto flex flex-col items-center justify-center">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    How <span class="text-[#307d7e]">We </span><span class="text-[#307d7ecb]">Do </span><span class="text-[#307d7ea2]">It</span>
+  </h2>
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-8 md:gap-16">
+  {
+    features.map((item) => (
+      <a href = {item.link} >
+        <div class="flex flex-col gap-4 items-start group bg-[#307d7e33] hover:bg-[#307d7e79] hover:border-[#307d7e] border border-transparent rounded-lg transition-all md:-m-5 p-5">
+          <div>
+            <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+            <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          </div>
+        </div>
+      </a>
+    ))
+  }
+</div>
+
+<br/>
+<br/>
+<div
+  class:list={[
+    "mx-auto flex flex-col items-center justify-center",
+  ]}>
+  <Link href="/contact" size="md" class="inline-flex items-center group gap-px">
+    <span>Request Our Services</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+      <path
+        fill-rule="evenodd"
+        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </Link>
+</div>
+<br/>
+<br/>

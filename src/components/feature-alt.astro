@@ -1,0 +1,448 @@
+---
+import { Picture } from "astro:assets";
+import FeatureImg1 from "../assets/features/6.png";
+import FeatureImg2 from "../assets/features/service_hands.jpg";
+import other_image from "../assets/features/other_services.png";
+import FeatureImg3 from "../assets/features/services_globe.jpg";
+import FeatureImg4 from "../assets/features/service_balls.jpg";
+import FeatureImg5 from "../assets/features/buildings.jpg";
+import FeatureImg6 from "../assets/features/Leadership.webp";
+import leader_image from "../assets/features/leadership_development.png";
+import business_image from "../assets/features/business_consulting.jpeg";
+import strategic_image from "../assets/features/strategic_planning.png";
+import program_image from "../assets/features/program_development.png";
+import grant_image from "../assets/features/grant_writing.jpeg";
+import { Icon } from "astro-icon/components";
+import Link from "@components/ui/link.astro";
+import Heading from "./heading.astro";
+
+const { nomargin } = Astro.props;
+---
+
+<div
+  class:list={[
+    "max-w-4xl mx-auto flex flex-col items-center justify-center",
+    !nomargin && "mt-24",
+  ]}>
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight mt-4 text-center">
+    Our <span class="text-[#307d7e]">Services</span>
+  </h2>
+</div>
+
+<!-- Business Consulting & Strategic Planning -->
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <div class="flex items-left gap-3 mt-10">
+        <div class="shrink-0">
+          <Heading  id="business_consultation"/>
+          <Picture
+            class="w-9 h-9 bg-slate-100"
+            formats={["avif", "webp"]}
+            src={business_image}
+            alt={"Business Consultation Icon"}
+            width="48"
+            height="48"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <Heading/>
+          <h3 class="text-2xl font-medium ">
+            Business Consultation
+          </h3>
+        </div>
+      </div>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Business consulting involves providing expert advice and guidance to businesses to help them improve their performance and efficiency. Consultants analyze the current operations, identify areas for improvement, and offer solutions to address challenges or capitalize on opportunities. This service can cover various aspects of business, including operations, marketing, finance, human resources, and more.
+      </p>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">At KB Business Services, LLC: </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We collaborate with clients to understand their business goals, challenges, and objectives.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We conduct thorough analysis and assessments of client operations to identify areas for improvement.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We develop tailored strategies and solutions to enhance business performance, efficiency, and profitability.</span>
+        </li>
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We provide expert advice on business processes, market trends, and industry best practices.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid place-items-center">
+    <Picture
+      src={FeatureImg1}
+      alt="Business Consultation"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+</div>
+
+
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={FeatureImg4}
+      alt="Business Consultation"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+
+<div class="grid place-items-center">
+  <div class="max-w-lg">
+    <div class="flex items-left gap-3 mt-10">
+      <div class="shrink-0">
+        <Heading  id="strategic_planning" />
+        <Picture
+          class="w-9 h-9 object-cover bg-slate-100"
+          formats={["avif", "webp"]}
+          src={strategic_image}
+          alt={"Strategic Planning Icon"}
+          width="48"
+          height="48"
+          loading="lazy"
+        />
+      </div>
+      <div>
+        <Heading/>
+        <h3 class="text-2xl font-medium ">
+          Strategic Planning
+        </h3>
+      </div>
+    </div>
+    <p class="mt-4 text-slate-600 [text-wrap:balance]">
+      Strategic planning is the process of defining an organization's long-term goals and objectives and determining the best approach to achieve them. It involves analyzing the internal and external environment, assessing strengths and weaknesses, and developing strategies and action plans to guide decision-making and resource allocation. Strategic planning helps organizations adapt to changes, stay competitive, and achieve sustainable growth.
+    </p>
+    <p class="mt-4 text-slate-600 [text-wrap:balance]">At KB Business Services, LLC: </p>
+
+    <ul class="grid mt-6 text-left gap-y-4">
+      <li class="flex items-center gap-3 text-neutral-800">
+        <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+        <span>We collaborate with clients to understand their long-term goals and objectives.</span>
+      </li>
+
+      <li class="flex items-center gap-3 text-neutral-800">
+        <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+        <span>We conduct comprehensive analyses of current business operations and market trends.</span>
+      </li>
+
+      <li class="flex items-center gap-3 text-neutral-800">
+        <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+        <span>We develop and implement strategic plans to drive organizational growth, efficiency, and sustainability.</span>
+      </li>
+      <li class="flex items-center gap-3 text-neutral-800">
+        <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+        <span>We provide guidance on market positioning, competitive intelligence, and industry best
+          practices.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+  
+
+</div>
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <div class="flex items-left gap-3 mt-10">
+        <div class="shrink-0">
+          <Heading  id="grant_writing" />
+          <Picture
+            class="w-9 h-9 object-cover bg-slate-100"
+            formats={["avif", "webp"]}
+            src={grant_image}
+            alt={"Grant Writing Icon"}
+            width="48"
+            height="48"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <Heading/>
+          <h3 class="text-2xl font-medium ">
+            Grant Writing
+          </h3>
+        </div>
+      </div>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Grant writing involves preparing proposals to secure funding from government agencies, foundations, or other sources for projects, programs, or initiatives. This service includes researching funding opportunities, crafting compelling proposals that align with the funder's priorities, and ensuring compliance with application requirements. Effective grant writing requires strong writing skills, strategic thinking, and knowledge of grant-making processes.
+      </p>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">At KB Business Services, LLC: </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We identify funding opportunities and research grant eligibility criteria.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We develop compelling grant proposals and applications to secure funding for client
+            projects.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We maintain up-to-date knowledge of grant regulations and compliance standards.</span>
+        </li>
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We collaborate with clients to gather relevant data and information for grant submissions.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+<div class="grid place-items-center">
+  <Picture
+    src={FeatureImg2}
+    alt="Business Consultation"
+    formats={["avif", "webp"]}
+    loading="lazy"
+  />
+</div>
+</div>
+
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={FeatureImg3}
+      alt="Business Consultation"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <div class="flex items-left gap-3 mt-10">
+        <div class="shrink-0">
+          <Heading  id="program_development" />
+          <Picture
+            class="w-9 h-9 object-cover bg-slate-100"
+            formats={["avif", "webp"]}
+            src={program_image}
+            alt={"Program Development Icon"}
+            width="48"
+            height="48"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <Heading/>
+          <h3 class="text-2xl font-medium ">
+            Program Development
+          </h3>
+        </div>
+      </div>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Program development entails designing, implementing, and managing initiatives or projects to address specific needs or achieve desired outcomes. This service involves conducting needs assessments, defining program objectives, designing intervention strategies, developing curriculum or materials, and establishing evaluation measures to assess program effectiveness. Program development spans various sectors, including education, healthcare, social services, and community development.
+      </p>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">At KB Business Services, LLC: </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We design and implement programs that align with client objectives and industry standards.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We conduct needs assessments and feasibility studies for new programs.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We monitor program performance and recommend improvements for optimal outcomes.</span>
+        </li>
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We Collaborate with clients to develop and refine programmatic goals and success metrics.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <div class="flex items-left gap-3 mt-10">
+        <div class="shrink-0">
+          <Heading  id="leadership_development" />
+          <Picture
+            class="w-9 h-9 object-cover bg-slate-100"
+            formats={["avif", "webp"]}
+            src={leader_image}
+            alt={"Leadership Development Icon"}
+            width="48"
+            height="48"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <Heading/>
+          <h3 class="text-2xl font-medium ">
+            Leadership Development
+          </h3>
+        </div>
+      </div>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        Leadership development focuses on enhancing the capabilities and effectiveness of individuals in leadership roles within organizations. This service includes providing training, coaching, and mentoring to develop leadership skills such as communication, decision-making, conflict resolution, and strategic thinking. Leadership development initiatives aim to cultivate a pipeline of competent leaders, foster a culture of leadership excellence, and drive organizational success.
+      </p>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">At KB Business Services, LLC: </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We provide leadership training and coaching to client executives and key personnel.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We design and implement leadership development programs to foster a culture of continuous improvement.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We conduct leadership assessments and provide feedback for professional development.</span>
+        </li>
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span >We collaborate with clients to identify and nurture emerging leaders within their organizations.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid place-items-center">
+    <Picture
+      src={FeatureImg6}
+      alt="Business Consultation"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+</div>
+
+<!-- Other Services -->
+<div class="grid md:grid-cols-2 py-10">
+  <div class="grid place-items-center">
+    <Picture
+      src={FeatureImg5}
+      alt="Business Consultation"
+      formats={["avif", "webp"]}
+      loading="lazy"
+    />
+  </div>
+  <div class="grid place-items-center">
+    <div class="max-w-lg">
+      <div class="flex items-left gap-3 mt-10">
+        <div class="shrink-0">
+          <Heading  id="other_services" />
+          <Picture
+            class="w-9 h-9 object-cover bg-slate-100"
+            formats={["avif", "webp"]}
+            src={other_image}
+            alt={"Other Services Icon"}
+            width="48"
+            height="48"
+            loading="lazy"
+          />
+        </div>
+        <div>
+          <Heading/>
+          <h3 class="text-2xl font-medium ">
+            Other Services
+          </h3>
+        </div>
+      </div>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]">
+        KB Business Services offers a diverse range of specialized services to meet the unique needs of our clients. 
+      </p>
+      <p class="mt-4 text-slate-600 [text-wrap:balance]"><strong>In addition to our core offerings, we provide the following specialized services:</strong> </p>
+
+      <ul class="grid mt-6 text-left gap-y-4">
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span ><strong><span style="background-color: #307d7e79">Immigration Advising:</span></strong> We offer expert guidance and support to international individuals navigating the complex immigration process. Our service includes assistance with visa applications, student visa compliance, post-degree completion opportunities, documentation preparation, and strategic planning for immigration-related matters. Our immigration advisors help clients understand their options, overcome challenges, and achieve their immigration goals legally and efficiently.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span ><strong><span style="background-color: #307d7e79">Academic Mentoring:</span></strong> We provide personalized support and guidance to students at various academic levels, including undergraduate, graduate, and doctoral degrees. Our mentors provide academic assistance, study skills development, research guidance, and career advice to help students excel academically and achieve their educational and career goals.</span>
+        </li>
+
+        <li class="flex items-center gap-3 text-neutral-800">
+          <Icon name="ph:check-circle-fill" class="w-5 h-5" />
+
+          <span ><strong><span style="background-color: #307d7e79">Editorial Services:</span></strong> We offer professional proofreading, editing, and formatting services for academic papers, as well as non-academic documents such as resumes and cover letters, ensuring clarity, coherence, and effectiveness in communication. Our editors ensure clarity, coherence, accuracy, and adherence to formatting and style guidelines. We also offer feedback on content, organization, and language to improve the overall quality and effectiveness of written materials. </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div
+  class:list={[
+    "mx-auto flex flex-col items-center justify-center",
+  ]}>
+  <Link href="/contact" size="lg" class="inline-flex items-center group gap-px">
+    <span>Request Our Services</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      class="w-4 h-4 mt-px group-hover:translate-x-1 transition-transform">
+      <path
+        fill-rule="evenodd"
+        d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
+        clip-rule="evenodd"></path>
+    </svg>
+  </Link>
+</div>
+
+<br/>
+

@@ -1,0 +1,184 @@
+---
+import Container from "@components/container.astro";
+import { Icon } from "astro-icon/components";
+import { Picture } from "astro:assets";
+import Logo from "@assets/logo.png";
+
+const { margin } = Astro.props;
+
+const footermenu = {
+  company: [
+    {
+      title: "About Us",
+      path: "/about",
+    },
+    {
+      title: "Blog",
+      path: "/blog",
+    },
+    {
+      title: "Contact Us",
+      path: "/contact",
+    },
+    {
+      title: "Payment Options",
+      path: "/payment_options",
+    },
+    {
+      title: "Testimonials",
+      path: "/testimonial",
+    },
+  ],
+  product: [
+    {
+      title: "Business Consultation",
+      path: "/services/#business_consultation",
+    },
+    {
+      title: "Strategic Planning",
+      path: "/services/#strategic_planning",
+    },
+    {
+      title: "Grant Writing",
+      path: "/services/#grant_writing",
+    },
+    {
+      title: "Program Development",
+      path: "/services/#program_development",
+    },
+    {
+      title: "Leadership Development",
+      path: "/services/#leadership_development",
+    },
+    {
+      title: "Other Services",
+      path: "/services/#other_services",
+    },
+  ],
+  resources: [
+    {
+      title: "Help Center",
+      path: "#",
+    },
+    {
+      title: "Guides",
+      path: "#",
+    },
+    {
+      title: "Documentation",
+      path: "#",
+    },
+    {
+      title: "Uptime Status",
+      path: "#",
+    },
+  ],
+};
+---
+
+<footer class:list={["py-14 bg-slate-100 border-t", margin && "mt-10"]}>
+  <Container>
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+      <div class="sm:col-span-2 md:col-span-3 lg:col-span-2">
+        <a href="/" class="text-lg flex items-center"
+          ><Picture
+            class="object-cover"
+            formats={["avif", "webp"]}
+            src={Logo}
+            alt={"Leadership Development Icon"}
+            width="200"
+            height="48"
+            loading="lazy"
+          />
+        </a>
+        <p class="mt-4 text-sm text-slate-700 max-w-xs">
+          KB Business Services, LLC is a Business and Personal Branding Consulting Firm
+          with a wide range of services to fit your needs.
+        </p>
+        <div class="flex gap-3 mt-4 items-center">
+          <a
+            href="https://www.facebook.com/profile.php?id=61556517761919"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+            <Icon name="bx:bxl-facebook-circle" class="w-4 h-4" /><span
+              class="sr-only">Facebook</span
+            >
+          </a>
+          <a
+            href="https://instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+            <Icon name="bx:bxl-instagram" class="w-4 h-4" />
+            <span class="sr-only">Instagram</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/kb-business-services-llc/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-slate-200 hover:bg-slate-300 rounded w-6 h-6 inline-flex items-center justify-center text-slate-500">
+            <Icon name="bx:bxl-linkedin-square" class="w-4 h-4" /><span
+              class="sr-only">Linkedin</span>
+          </a>
+        </div>
+      </div>
+      <div>
+         <h3 class="font-medium text-sm text-slate-800">Services</h3>
+        <div class="flex flex-col mt-3">
+          {
+            footermenu.product.map((item) => (
+              <a
+                href={item.path || "#"}
+                class="py-2 text-sm text-slate-600 hover:text-teal-600">
+                {item.title}
+              </a>
+            ))
+          }
+        </div> 
+      </div>
+      <!-- <div>
+         <h3 class="font-medium text-sm text-slate-800"></h3>
+        <div class="flex flex-col mt-3">
+          {
+            footermenu.resources.map((item) => (
+              <a
+                href={item.path || "#"}
+                class="py-2 text-sm text-slate-600 hover:text-teal-600">
+                {item.title}
+              </a>
+            ))
+          } 
+        </div>
+      </div> -->
+      <div>
+        <h3 class="font-medium text-sm text-slate-800">Company</h3>
+        <div class="flex flex-col mt-3">
+          {
+            footermenu.company.map((item) => (
+              <a
+                href={item.path || "#"}
+                class="py-2 text-sm text-slate-600 hover:text-teal-600">
+                {item.title}
+              </a>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  </Container>
+
+  <div class="mt-14 pt-8 px-5 border-t">
+    <Container>
+      <p class="text-center text-sm text-slate-600 [text-wrap:balance]">
+        Copyright © {new Date().getFullYear()} KB Business Services, LLC. All rights
+        reserved.
+      </p>
+      <p class="text-center text-xs text-slate-600 mt-2">
+        <a href="/terms" class="hover:text-[#307d7e]"> Terms</a>
+        ・
+        <a href="/privacy" class="hover:text-[#307d7e]"> Privacy</a>
+      </p>
+    </Container>
+  </div>
+</footer>

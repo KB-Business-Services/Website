@@ -60,23 +60,77 @@ import Button from "./ui/button.astro";
   </div>
   <div class="mb-5">
     <p>Select a Service:<p>
-    <input 
-    placeholder="Select a Service"
-    list="service" 
-    required
-    class="w-full px-4 py-3 border placeholder:text-slate-400 rounded-md outline-none focus:ring-4 border-slate-300 focus:border-slate-600 ring-slate-100"
-    >
-    <datalist id="service">
-      <option value="Business Consulting"/>
-      <option value="Strategic Planning"/>
-      <option value="Grant Writing"/>
-      <option value="Program Development"/>
-      <option value="Leadership Development"/>
-      <option value="Immigration Advising"/>
-      <option value="Academic Mentoring"/>
-      <option value="Editorial Services"/>
-      <option value="Other"/>
-    </datalist>
+    <radio-group name="subject" required>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Business Consulting"
+          required
+        />
+        <span class="ml-2">Business Consulting</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Strategic Planning"
+        />
+        <span class="ml-2">Strategic Planning</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Grant Writing"
+        />
+        <span class="ml-2">Grant Writing</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Program Development"
+        />
+        <span class="ml-2">Program Development</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Leadership Development"
+        />
+        <span class="ml-2">Leadership Development</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Immigration Advising"
+        />
+        <span class="ml-2">Immigration Advising</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Academic Mentoring"
+        />
+        <span class="ml-2">Academic Mentoring</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input
+          type="radio"
+          name="contact_form"
+          value="Editorial Services"
+        />
+        <span class="ml-2">Editorial Services</span>
+      </label>
+      <label class="flex items-center mb-3">
+        <input type="radio" name="contact_form" value="Other"/>
+        <span class="ml-2">Other</span>
+      </label>
+    </radio-group>
   </div>
   <div class="mb-5">
     <div class="mb-3">
